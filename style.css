@@ -1,0 +1,61 @@
+/* General reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f9;
+    padding: 20px;
+  }
+  
+  /* Moodboard container */
+  .moodboard {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 900px;
+    gap: 10px;
+  }
+  
+  /* Individual image container */
+  .moodboard img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s, filter 0.3s;
+    border-radius: 10px;
+  }
+  
+  /* Grid items for different sized images */
+  .moodboard .image {
+    position: relative;
+    overflow: hidden;
+    flex: 1 1 calc(33.333% - 10px);
+    height: 200px;
+    border-radius: 10px;
+  }
+  
+  /* Hover effect */
+  .moodboard .image:hover img {
+    transform: scale(1.05);
+    filter: brightness(0.8);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .moodboard .image {
+      flex: 1 1 calc(50% - 10px);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .moodboard .image {
+      flex: 1 1 100%;
+    }
+  }
+  
